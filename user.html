@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='tr'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Kullanıcı Paneli | Arıza Tespit Sistemi</title>
+  <link rel='stylesheet' href='assets/css/style.css'>
+</head>
+<body>
+  <header>
+    <h1>Hoş geldiniz!</h1>
+    <nav>
+  <a href="ariza-ekle.html" class="active">Arıza Ekle</a>
+  <a href="user.html" class="active">Kayıtlarım</a>
+  <a href="log.html">Günlük</a>
+  <a href="index.html">Çıkış</a>
+</nav>
+  </header>
+
+  <main>
+    <section class='card'>
+      <h2>Yeni Arıza Kaydı</h2>
+      <form method='POST' action='#'>
+        <label>Arıza Başlığı
+          <input type='text' name='title' required>
+        </label>
+        <label>Açıklama
+          <textarea name='description' rows='4' required></textarea>
+        </label>
+        <label>İlgili Sunucu
+          <input type='text' name='server'>
+        </label>
+        <button type='submit'>Kaydet</button>
+      </form>
+    </section>
+
+    <section class='table-wrapper'>
+      <h2>Önceki Kayıtlarım (Statik Örnek)</h2>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Sunucu</th><th>Açıklama</th><th>Tarih</th><th>Durum</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>12</td><td>srv-01</td><td>Disk %95 dolu</td><td>22-07-2025</td><td>Çözüldü</td></tr>
+          <tr><td>15</td><td>srv-02</td><td>RAM kullanımı yüksek</td><td>22-07-2025</td><td>Beklemede</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+</body>
+</html>

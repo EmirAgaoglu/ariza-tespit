@@ -1,0 +1,66 @@
+/* Basit, temiz tema — Bootstrap’siz, saf CSS */
+:root {
+  --primary: #004d7a;
+  --primary-light: #337ab7;
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --danger: #d9534f;
+  --success: #5cb85c;
+  --warning: #f0ad4e;
+  --radius: .5rem;
+  --shadow: 0 2px 6px rgba(0,0,0,.08);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{background:var(--bg);color:#222;min-height:100vh;display:flex;flex-direction:column;}
+
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:1rem 2rem;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:var(--shadow);
+}
+header h1{font-size:1.5rem;font-weight:600;}
+nav a{
+  color:#fff;text-decoration:none;margin-left:1rem;padding:.3rem .6rem;border-radius:.3rem;
+}
+nav a:hover,nav a.active{background:rgba(255,255,255,.2);}
+
+main{flex:1;width:90%;max-width:960px;margin:2rem auto;}
+
+.card{
+  background:var(--card-bg);padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);
+  margin-bottom:2rem;
+}
+.card h2{margin-bottom:1rem;}
+
+label{display:block;margin:.7rem 0;font-weight:500;}
+input,textarea,select,button{
+  width:100%;padding:.6rem;border:1px solid #ccc;border-radius:var(--radius);
+  font-size:1rem;
+}
+button{
+  background:var(--primary);
+  color:#fff;border:none;cursor:pointer;margin-top:1rem;
+}
+button:hover{background:var(--primary-light);}
+
+.table-wrapper{overflow-x:auto;}
+table{
+  width:100%;border-collapse:collapse;background:var(--card-bg);
+  border-radius:var(--radius);box-shadow:var(--shadow);
+}
+table thead{background:var(--primary);color:#fff;}
+th,td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid #eee;}
+tbody tr:hover{background:#fafafa;}
+.done{color:var(--success);font-weight:600;}
+.progress{color:var(--warning);font-weight:600;}
+.open{color:var(--danger);font-weight:600;}
+
+footer{
+  background:#e9ecef;color:#555;text-align:center;padding:.8rem 0;font-size:.9rem;
+  margin-top:auto;
+}

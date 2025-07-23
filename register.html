@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='tr'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Kayıt Ol | Arıza Tespit Sistemi</title>
+  <link rel='stylesheet' href='assets/css/style.css'>
+</head>
+<body>
+  <header>
+    <h1>Arıza Tespit Sistemi</h1>
+    <nav>
+      <a href='index.html'>Giriş</a>
+      <a href='register.html' class='active'>Kayıt Ol</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class='card'>
+      <h2>Yeni Hesap Oluştur</h2>
+      <form method='POST' action='#'>
+        <label>Ad Soyad
+          <input type='text' name='fullname' required>
+        </label>
+        <label>E-posta
+          <input type='email' name='email' required>
+        </label>
+        <label>Şifre
+          <input type='password' name='password' required>
+        </label>
+        <button type='submit'>Kayıt Ol</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+</body>
+</html>
