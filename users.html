@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kullanıcılar | Admin</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <strong>Admin Paneli</strong>
+      <div>
+        <a href="admin.html">Arızalar</a>
+        <a href="users.html" class="active">Kullanıcılar</a>
+        <a href="servers.html">Sunucular</a>
+        <a href="log.html">Günlük</a>
+        <a href="index.html">Çıkış</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="table-wrapper">
+      <h2>Kullanıcı Listesi</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Ad Soyad</th><th>E‑posta</th><th>Rol</th><th>Durum</th><th>Aksiyon</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td><td>Ayşe Yılmaz</td><td>ayse@firma.com</td><td>user</td><td>Aktif</td>
+            <td><button data-id="1">Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <section class="card" style="max-width:450px;">
+      <h3>Yeni Kullanıcı</h3>
+      <form id="frmNewUser" method="post" action="#">
+        <label>Ad Soyad <input name="fullname" required /></label>
+        <label>E‑posta <input type="email" name="email" required /></label>
+        <label>Şifre <input type="password" name="password" required /></label>
+        <label>Rol
+          <select name="role"><option value="user">user</option><option value="admin">admin</option></select>
+        </label>
+        <button type="submit">Ekle</button>
+      </form>
+    </section>
+  </main>
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+</body>
+</html>

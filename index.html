@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang='tr'>
+<html lang="tr">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Arıza Tespit Sistemi | Giriş</title>
-  <link rel='stylesheet' href='assets/css/style.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arıza Tespit Sistemi | Giriş</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Arıza Tespit Sistemi</h1>
-    <nav>
-      <a href='index.html' class='active'>Giriş</a>
-      <a href='register.html'>Kayıt Ol</a>
+    <nav class="navbar">
+      <strong>Arıza Tespit Sistemi</strong>
+      <div>
+        <a href="index.html" class="active">Giriş</a>
+        <a href="register.html">Kayıt Ol</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section class='card'>
-      <h2>Giriş Yap</h2>
-      <form method='POST' action='#'>
-        <label>E-posta
-          <input type='email' name='email' placeholder='ornek@firma.com' required>
-        </label>
-        <label>Şifre
-          <input type='password' name='password' required>
-        </label>
-        <button type='submit'>Giriş</button>
+    <section class="card" style="max-width:400px;margin-inline:auto;">
+      <h2>Oturum Aç</h2>
+      <form action="#" method="post">
+        <label>E‑posta<input type="email" name="email" required /></label>
+        <label>Şifre<input type="password" name="password" required /></label>
+        <button type="submit">Giriş Yap</button>
       </form>
     </section>
   </main>
 
-  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
 </body>
 </html>

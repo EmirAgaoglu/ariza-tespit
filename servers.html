@@ -1,52 +1,46 @@
 <!DOCTYPE html>
-<html lang='tr'>
+<html lang="tr">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Sunucular | Arıza Tespit Sistemi</title>
-  <link rel='stylesheet' href='assets/css/style.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunucular | Admin</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Sunucu Yönetimi</h1>
-    <nav>
-      <a href='admin.html'>Arıza Listesi</a>
-      <a href='servers.html' class='active'>Sunucular</a>
-      <a href='index.html'>Çıkış</a>
+    <nav class="navbar">
+      <strong>Admin Paneli</strong>
+      <div>
+        <a href="admin.html">Arızalar</a>
+        <a href="users.html">Kullanıcılar</a>
+        <a href="servers.html" class="active">Sunucular</a>
+        <a href="log.html">Günlük</a>
+        <a href="index.html">Çıkış</a>
+      </div>
     </nav>
   </header>
-
   <main>
-    <section class='card'>
-      <h2>Yeni Sunucu Ekle</h2>
-      <form method='POST' action='#'>
-        <label>Sunucu Adı
-          <input type='text' name='servername' required>
-        </label>
-        <label>IP / DNS
-          <input type='text' name='ip'>
-        </label>
-        <label>Açıklama
-          <textarea name='svrdesc' rows='3'></textarea>
-        </label>
-        <button type='submit'>Ekle</button>
+    <section class="card" style="max-width:500px;">
+      <h2>Yeni Sunucu</h2>
+      <form method="post" action="#">
+        <label>Sunucu Adı <input name="servername" required /></label>
+        <label>IP / DNS <input name="ip" /></label>
+        <label>Açıklama <textarea name="svrdesc" rows="3"></textarea></label>
+        <button type="submit">Ekle</button>
       </form>
     </section>
 
-    <section class='table-wrapper'>
-      <h2>Mevcut Sunucular (Statik Örnek)</h2>
+    <div class="table-wrapper">
+      <h2>Mevcut Sunucular</h2>
       <table>
-        <thead>
-          <tr><th>ID</th><th>Ad</th><th>IP / DNS</th><th>Açıklama</th></tr>
-        </thead>
+        <thead><tr><th>ID</th><th>Ad</th><th>IP / DNS</th><th>Açıklama</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>srv-01</td><td>10.10.0.11</td><td>Veritabanı</td></tr>
-          <tr><td>2</td><td>srv-02</td><td>10.10.0.12</td><td>Uygulama</td></tr>
+          <tr><td>1</td><td>srv‑01</td><td>10.10.0.11</td><td>Veritabanı</td></tr>
+          <tr><td>2</td><td>srv‑02</td><td>10.10.0.12</td><td>Uygulama</td></tr>
         </tbody>
       </table>
-    </section>
+    </div>
   </main>
-
-  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
 </body>
 </html>

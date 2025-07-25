@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arıza Ekle | Arıza Tespit Sistemi</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arıza Ekle</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Arıza Ekle</h1>
-    <nav>
-      <a href="ariza-ekle.html" class="active">Arıza Ekle</a>
-      <a href="user.html">Kayıtlarım</a>
-      <a href="log.html">Günlük</a>
-      <a href="index.html">Çıkış</a>
+    <nav class="navbar">
+      <strong>Arıza Tespit Sistemi</strong>
+      <div>
+        <a href="ariza-ekle.html" class="active">Arıza Ekle</a>
+        <a href="user.html">Kayıtlarım</a>
+        <a href="index.html">Çıkış</a>
+      </div>
     </nav>
   </header>
-
   <main>
-    <section class="card">
-      <h2>Yeni Arıza Kaydı</h2>
-      <form method="POST" action="#">
-        <label>Arıza Başlığı
-          <input type="text" name="title" required>
-        </label>
-        <label>Açıklama
-          <textarea name="description" rows="4" required></textarea>
-        </label>
-        <label>İlgili Sunucu
-          <input type="text" name="server">
-        </label>
-        <button type="submit">Kaydet</button>
+    <section class="card" style="max-width:600px;margin-inline:auto;">
+      <h2>Yeni Arıza Kaydı</h2>
+      <form method="post" action="#">
+        <label>Başlık <input name="title" required /></label>
+        <label>İlgili Sunucu <input name="server" /></label>
+        <label>Açıklama <textarea name="description" rows="4" required></textarea></label>
+        <button type="submit">Gönder</button>
       </form>
     </section>
   </main>
-
-  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
 </body>
 </html>

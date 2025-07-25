@@ -1,66 +1,52 @@
-/* Basit, temiz tema — Bootstrap’siz, saf CSS */
 :root {
-  --primary: #004d7a;
-  --primary-light: #337ab7;
-  --bg: #f5f7fa;
-  --card-bg: #ffffff;
-  --danger: #d9534f;
-  --success: #5cb85c;
-  --warning: #f0ad4e;
-  --radius: .5rem;
-  --shadow: 0 2px 6px rgba(0,0,0,.08);
+  /* Renkler */
+  --clr-primary: #004d7a;
+  --clr-primary-light: #337ab7;
+  --clr-bg: #f5f7fa;
+  --clr-surface: #ffffff;
+  --clr-border: #dfe3e8;
+  --clr-text: #222;
+  --clr-success: #22c55e;
+  --clr-danger:  #ef4444;
+  --clr-warning: #fbbf24;
+  /* Stil */
+  --radius: .6rem;
+  --shadow: 0 3px 10px rgba(0,0,0,.08);
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 16px;
 }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--clr-bg);color:var(--clr-text);min-height:100vh;display:flex;flex-direction:column;}
 
-*{box-sizing:border-box;margin:0;padding:0;}
+/* Header & Nav */
+header{background:var(--clr-primary);color:#fff;box-shadow:var(--shadow);}
+.navbar{max-width:1200px;margin:0 auto;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;}
+.navbar a{color:#fff;text-decoration:none;margin-left:1rem;padding:.4rem .8rem;border-radius:.3rem;transition:background .15s;}
+.navbar a:hover,.navbar a.active{background:rgba(255,255,255,.2);}  
 
-body{background:var(--bg);color:#222;min-height:100vh;display:flex;flex-direction:column;}
+/* Ana Alan */
+main{flex:1;max-width:1200px;margin:2rem auto;width:90%;}
 
-header{
-  background:var(--primary);
-  color:#fff;
-  padding:1rem 2rem;
-  display:flex;justify-content:space-between;align-items:center;
-  box-shadow:var(--shadow);
-}
-header h1{font-size:1.5rem;font-weight:600;}
-nav a{
-  color:#fff;text-decoration:none;margin-left:1rem;padding:.3rem .6rem;border-radius:.3rem;
-}
-nav a:hover,nav a.active{background:rgba(255,255,255,.2);}
-
-main{flex:1;width:90%;max-width:960px;margin:2rem auto;}
-
-.card{
-  background:var(--card-bg);padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);
-  margin-bottom:2rem;
-}
+/* Kart & Form */
+.card{background:var(--clr-surface);padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:2rem;}
 .card h2{margin-bottom:1rem;}
 
-label{display:block;margin:.7rem 0;font-weight:500;}
-input,textarea,select,button{
-  width:100%;padding:.6rem;border:1px solid #ccc;border-radius:var(--radius);
-  font-size:1rem;
-}
-button{
-  background:var(--primary);
-  color:#fff;border:none;cursor:pointer;margin-top:1rem;
-}
-button:hover{background:var(--primary-light);}
+label{display:block;margin:.8rem 0 .4rem;font-weight:500;}
+input,textarea,select,button{width:100%;padding:.6rem;border:1px solid var(--clr-border);border-radius:var(--radius);font-size:1rem;}
+button{background:var(--clr-primary);color:#fff;border:none;cursor:pointer;margin-top:1rem;border-radius:var(--radius);} 
+button:hover{background:var(--clr-primary-light);}  
 
+/* Tablo */
 .table-wrapper{overflow-x:auto;}
-table{
-  width:100%;border-collapse:collapse;background:var(--card-bg);
-  border-radius:var(--radius);box-shadow:var(--shadow);
-}
-table thead{background:var(--primary);color:#fff;}
-th,td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid #eee;}
-tbody tr:hover{background:#fafafa;}
-.done{color:var(--success);font-weight:600;}
-.progress{color:var(--warning);font-weight:600;}
-.open{color:var(--danger);font-weight:600;}
+table{width:100%;border-collapse:collapse;background:var(--clr-surface);border-radius:var(--radius);box-shadow:var(--shadow);}
+thead{background:var(--clr-primary);color:#fff;}
+th,td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--clr-border);} 
+tbody tr:nth-child(odd){background:#fafafa;} tbody tr:hover{background:#f1f5f9;}
 
-footer{
-  background:#e9ecef;color:#555;text-align:center;padding:.8rem 0;font-size:.9rem;
-  margin-top:auto;
-}
+/* Durum Etiketleri */
+.status--done{color:var(--clr-success);font-weight:600;}
+.status--progress{color:var(--clr-warning);font-weight:600;}
+.status--open{color:var(--clr-danger);font-weight:600;}
+
+/* Footer */
+footer{background:#e9ecef;color:#555;text-align:center;padding:.9rem 0;font-size:.9rem;margin-top:auto;}

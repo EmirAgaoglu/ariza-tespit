@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang='tr'>
+<html lang="tr">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Admin Paneli | Arıza Tespit Sistemi</title>
-  <link rel='stylesheet' href='assets/css/style.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Paneli | Arıza Tespit</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Admin Paneli</h1>
-    <nav>
-      <a href='admin.html' class='active'>Arıza Listesi</a>
-      <a href='servers.html'>Sunucular</a>
-      <a href='log.html'>Günlük</a>
-      <a href='index.html'>Çıkış</a>
+    <nav class="navbar">
+      <strong>Admin Paneli</strong>
+      <div>
+        <a href="admin.html" class="active">Arızalar</a>
+        <a href="users.html">Kullanıcılar</a>
+        <a href="servers.html">Sunucular</a>
+        <a href="log.html">Günlük</a>
+        <a href="index.html">Çıkış</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section class='table-wrapper'>
-      <h2>Tüm Arızalar</h2>
+    <section class="table-wrapper">
+      <h2>Tüm Arızalar</h2>
       <table>
         <thead>
-          <tr><th>ID</th><th>Kullanıcı</th><th>Sunucu</th><th>Açıklama</th><th>Tarih</th><th>Durum</th></tr>
+          <tr>
+            <th>ID</th><th>Kullanıcı</th><th>Sunucu</th><th>Açıklama</th><th>Tarih</th><th>Durum</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>12</td><td>ayse@firma.com</td><td>srv-01</td><td>Disk %95 dolu</td><td>22-07-2025</td><td class='done'>Çözüldü</td></tr>
-          <tr><td>15</td><td>mehmet@firma.com</td><td>srv-02</td><td>RAM kullanımı yüksek</td><td>22-07-2025</td><td class='progress'>İşlemde</td></tr>
-          <tr><td>18</td><td>fatma@firma.com</td><td>srv-03</td><td>Servis cevap vermiyor</td><td>23-07-2025</td><td class='open'>Açık</td></tr>
+          <!-- Backend'den dinamik gelir -->
+          <tr>
+            <td>12</td><td>ayse@firma.com</td><td>srv‑01</td><td>Disk %95 dolu</td><td>22‑07‑2025</td>
+            <td class="status--done">Çözüldü</td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
-
-  <footer>© 2025 | Arıza Tespit Sistemi</footer>
+  <footer>© 2025 | Arıza Tespit Sistemi</footer>
 </body>
 </html>
